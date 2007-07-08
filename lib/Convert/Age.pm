@@ -9,11 +9,11 @@ Convert::Age - convert integer seconds into a "compact" form and back.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -21,6 +21,13 @@ our $VERSION = '0.01';
 
     my $c = Convert::Age::encode(189988007); # 6y7d10h26m47s
     my $d = Convert::Age::decode('5h37m5s'); # 20225
+
+    # or export functions
+
+    use Convert::Age qw(encode_age decode_age);
+
+    my $c = encode_age(20225); # 5h37m5s
+    my $d = decode_age('5h37m5s'); # 5h37m5s
 
 =cut
 
