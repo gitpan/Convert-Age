@@ -13,7 +13,7 @@ Version 0.02
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -99,8 +99,6 @@ sub encode_age {
 convert the "readable" format into seconds
 
 =cut
-
-use YAML;
 
 sub decode {
     my $age = shift;
