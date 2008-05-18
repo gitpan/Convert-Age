@@ -9,11 +9,11 @@ my @data = qw(
     4m45s
     216
     3m36s
-    189989653
+    189985765
     6y7d10h54m13s
-    189989653
+    189985765
     6y7d10h54m13s
-    189989659
+    189985771
     6y7d10h54m19s
     458
     7m38s
@@ -25,7 +25,7 @@ my @data = qw(
     6h21m17s
     61488
     17h4m48s
-    189989653
+    189985765
     6y7d10h54m13s
 );
 
@@ -37,8 +37,8 @@ for my $f ( 3600*2 .. 3600 * 2 + 10 ) {
 }
 
 while(my ($i, $j) = splice(@data, 0, 2)) {
-    ok( $i == decode_age($j),  "$i == $j");
-    ok( $j eq encode_age($i), "$j == $i");
+    ok( $i == decode_age($j),  "$i == decode_age( $j ) == ". decode_age($j));
+    ok( $j eq encode_age($i), "$j == encode_age ( $i ) == ". encode_age($i));
 }
 
 diag( "Testing Convert::Age $Convert::Age::VERSION, Perl $], $^X" );

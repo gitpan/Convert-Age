@@ -1,9 +1,9 @@
 --- #YAML:1.0
 name:                Convert-Age
-version:             0.03
+version:             0.04
 abstract:            convert integer seconds into a "compact" form and back.
 license:             ~
-generated_by:        ExtUtils::MakeMaker version 6.35
+generated_by:        ExtUtils::MakeMaker version 6.36
 distribution_type:   module
 requires:     
     Test::More:                    0

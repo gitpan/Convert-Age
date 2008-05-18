@@ -9,11 +9,11 @@ Convert::Age - convert integer seconds into a "compact" form and back.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 =head1 SYNOPSIS
 
@@ -49,6 +49,12 @@ synonym for Convert::Age::decode()
 
 =back
 
+=head1 NOTE
+
+The methods in this module are suitable for some kinds of logging and
+input/output conversions.  It achieves the conversion through simple
+remainder arithmetic and the length of a year as 365.2425 days.
+
 =head1 FUNCTIONS
 
 =head2 encode
@@ -58,7 +64,7 @@ convert seconds into a "readable" format 344 => 5m44s
 =cut
 
 my %convert = (
-    y => 365.25 * 3600 * 24,
+    y => 365.2425 * 3600 * 24,
     d => 3600 * 24,
     h => 3600,
     m => 60,
